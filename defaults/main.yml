@@ -1,0 +1,31 @@
+---
+common_lang: "en_US.UTF-8"
+common_lc_all: "en_US.UTF-8"
+
+common_repos:
+  - name: base
+    description: CentOS-$releasever - Base
+    baseurl: http://vault.centos.org/$releasever/os/$basearch/
+    enabled: 1
+    gpgcheck: 0
+    gpgkey: ""
+  - name: updates
+    description: CentOS-$releasever - Updates
+    baseurl: http://vault.centos.org/$releasever/updates/$basearch/
+    enabled: 1
+    gpgcheck: 0
+    gpgkey: ""
+  - name: extras
+    description: CentOS-$releasever - Extras
+    baseurl: http://vault.centos.org/$releasever/extras/$basearch/
+    enabled: 1
+    gpgcheck: 0
+    gpgkey: ""
+
+common_epel_repo:
+ name: epel
+ description: EPEL-$releasever
+ baseurl: http://dl.fedoraproject.org/pub/epel/6/$basearch/
+ enabled: 1
+ gpgcheck: 0
+ gpgkey: ""

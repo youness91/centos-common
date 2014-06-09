@@ -1,0 +1,25 @@
+---
+- name: change system locale
+  template: src=i18n
+            dest=/etc/sysconfig/i18n
+
+- name: remove all repo settings
+  file: path=/etc/yum.repos.d
+        state=absent
+
+- name: recreate /etc/yum.repos.d/
+  file: path=/etc/yum.repos.d
+        state=directory
+        owner=root
+        group=root
+        mode=0755
+
+- name: install CentOS-Base repo
+  template: src=CentOS-Base.repo
+            dest=/etc/yum.repos.d/CentOS-Base.repo
+            mode=0644
+
+- name: change RPEL repo
+  template: src=EPEL.repo
+            dest=/etc/yum.repos.d/EPEL.repo
+            mode=0644

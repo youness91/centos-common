@@ -1,0 +1,6 @@
+[{{ common_epel_repo.name }}]
+name={{ common_epel_repo.description }}
+baseurl={{ common_epel_repo.baseurl }}
+enabled={{ common_epel_repo.enabled }}
+gpgcheck={{ common_epel_repo.gpgcheck }}
+gpgkey={{ common_epel_repo.gpgkey }}

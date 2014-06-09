@@ -1,0 +1,13 @@
+galaxy_info:
+  author: AR
+  description: common setup routine for centos
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+  - name: CentOS
+    versions:
+    - 5
+    - 6
+  categories:
+  - system
+dependencies: []

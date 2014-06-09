@@ -1,0 +1,9 @@
+{% for repo in common_repos %}
+[{{ repo.name }}]
+name={{ repo.description }}
+baseurl={{ repo.baseurl }}
+enabled={{ repo.enabled }}
+gpgcheck={{ repo.gpgcheck }}
+gpgkey={{ repo.gpgkey }}
+
+{% endfor %}
