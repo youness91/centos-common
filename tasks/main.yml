@@ -3,10 +3,6 @@
   template: src=i18n
             dest=/etc/sysconfig/i18n
 
-- name: remove all repo settings
-  file: path=/etc/yum.repos.d
-        state=absent
-
 - name: recreate /etc/yum.repos.d/
   file: path=/etc/yum.repos.d
         state=directory

@@ -8,11 +8,31 @@ This role requires Ansible 1.2 or higher, and platform requirements are listed i
 
 ## Role Variables
 
-TODO
+see `defaults/main.yml`.
 
-## Examples
+You're encouraged to override repo settings like
 
-TODO
+```
+common_repos:
+  - name: base
+    description: CentOS-$releasever - Base
+    baseurl: http://your.yum.repo/centos/$releasever/os/$basearch/
+    enabled: 1
+    gpgcheck: 0
+    gpgkey: ""
+  - name: updates
+    description: CentOS-$releasever - Updates
+    baseurl: http://your.yum.repo/centos/$releasever/updates/$basearch/
+    enabled: 1
+    gpgcheck: 0
+    gpgkey: ""
+  - name: extras
+    description: CentOS-$releasever - Extras
+    baseurl: http://your.yum.repo/centos/$releasever/extras/$basearch/
+    enabled: 1
+    gpgcheck: 0
+    gpgkey: ""
+```
 
 ## Dependencies
 

@@ -2,6 +2,9 @@
 common_lang: "en_US.UTF-8"
 common_lc_all: "en_US.UTF-8"
 
+common_release_version: 6.5
+common_release_major_version: 6
+
 common_repos:
   - name: base
     description: CentOS-$releasever - Base
@@ -25,7 +28,7 @@ common_repos:
 common_epel_repo:
  name: epel
  description: EPEL-$releasever
- baseurl: http://dl.fedoraproject.org/pub/epel/6/$basearch/
+ baseurl: "http://dl.fedoraproject.org/pub/epel/{{ common_release_major_version }}/$basearch/"
  enabled: 1
  gpgcheck: 0
  gpgkey: ""
